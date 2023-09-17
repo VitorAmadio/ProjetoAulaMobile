@@ -23,7 +23,7 @@ const ListItens = ({dataApi}: ItensProps) =>{
         <View>
             <Card image={dataApi.flags.png} name={dataApi.name.common}
                 language={dataApi.languages[Object.keys(dataApi.languages)[0]]}
-                region={dataApi.region} capital={dataApi.capital}
+                region={dataApi.region} capital={dataApi.capital}  
             />
         </View>
     )

@@ -1,11 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import Home from './src/screens/Home';
-import Card from './src/components/Card';
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from '@react-navigation/stack';
+
+const Stack = createStackNavigator(); 
 
 export default function App() {
   return (
-   <Home />
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={Home} />
+      </Stack.Navigator>
+      <StatusBar style="auto" />
+    </NavigationContainer>
   );
 }
-
-
